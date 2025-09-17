@@ -3,10 +3,10 @@ import { Text, TouchableOpacity, View } from "react-native";
 
 export default function Header() {
   return (
-    <View className="flex-row justify-between items-center px-4 py-2 bg-white border-b border-gray-200">
+    <View className="flex justify-between items-center px-4 py-2 bg-white border-b border-gray-200">
       {/* 로고 */}
       <Link href="/" asChild>
-        <TouchableOpacity>DevJsonMin</TouchableOpacity>
+        <TouchableOpacity>GodLife</TouchableOpacity>
       </Link>
 
       {/* 현재 날짜 */}
