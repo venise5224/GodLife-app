@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>홈 화면입니다 </Text>
+      <Text style={styles.title}>홈 화면입니다 ! </Text>
     </View>
   );
 }
