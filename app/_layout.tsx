@@ -12,7 +12,7 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <View style={{ flex: 1, paddingBottom: insets.bottom }}>
-        <Stack />
+        <Stack screenOptions={{ headerShown: false }} />
       </View>
     </SafeAreaProvider>
   );
