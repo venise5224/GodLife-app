@@ -2,11 +2,17 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { View } from "react-native";
 
-export default function TabsLayout() {
+export default function TabsLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <View className="flex flex-col h-full">
+    <View className="flex-1">
       <Header />
-      <main className="flex-1">메인 콘텐츠 영역</main>
+
+      <View className="flex-1">{children}</View>
+
       <Footer />
     </View>
   );
