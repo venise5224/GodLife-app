@@ -1,17 +1,16 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import { Slot } from "expo-router";
 import { View } from "react-native";
 
-export default function TabsLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function TabsLayout() {
   return (
     <View className="flex-1">
       <Header />
 
-      <View className="flex-1">{children}</View>
+      <View className="flex-1">
+        <Slot /> {/* 현재 페이지 */}
+      </View>
 
       <Footer />
     </View>
