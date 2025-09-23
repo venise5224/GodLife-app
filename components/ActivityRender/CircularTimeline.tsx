@@ -1,7 +1,8 @@
 import { polarToCartesian } from "@/utils/polarToCartesian";
 import { Circle, Svg, Text as SvgText } from "react-native-svg";
+import TimelineRunner from "./TimelineRunner";
 
-const SIZE = 400; // SVG 크기 (앱에선 너무 크지 않게)
+const SIZE = 400; // SVG 크기
 const r = SIZE / 2 - 30; // 반지름
 const cx = SIZE / 2;
 const cy = SIZE / 2;
@@ -21,12 +22,12 @@ const CircularTimeline = () => {
 
       {/* 24시간 눈금 */}
       {Array.from({ length: 24 }).map((_, i) => {
-        const pos = polarToCartesian(cx, cy, i * 60, r + 15);
+        const hourPosition = polarToCartesian(cx, cy, i * 60, r + 15);
         return (
           <SvgText
             key={i}
-            x={pos.x}
-            y={pos.y}
+            x={hourPosition.x}
+            y={hourPosition.y}
             fontSize={10}
             fill="black"
             textAnchor="middle"
@@ -36,6 +37,9 @@ const CircularTimeline = () => {
           </SvgText>
         );
       })}
+
+      {/* 현재 시간 표시 */}
+      <TimelineRunner cx={cx} cy={cy} r={r} />
     </Svg>
   );
 };

@@ -1,3 +1,4 @@
+// 시간을 좌표로 변환
 export const polarToCartesian = (
   cx: number,
   cy: number,
@@ -8,5 +9,6 @@ export const polarToCartesian = (
   return {
     x: cx + r * Math.cos(angle),
     y: cy + r * Math.sin(angle),
+    deg: angle * (180 / Math.PI) + 90,
   };
 };

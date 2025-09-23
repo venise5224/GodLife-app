@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Pressable, Text, View } from "react-native";
 import CircularTimeline from "./CircularTimeline";
 
-export default function ActivityRender() {
+const ActivityRender = () => {
   const [renderTab, setRenderTab] = useState<"timeline" | "list">("timeline");
 
   return (
@@ -56,4 +56,6 @@ export default function ActivityRender() {
       </View>
     </View>
   );
-}
+};
+
+export default ActivityRender;

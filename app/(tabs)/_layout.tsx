@@ -3,7 +3,7 @@ import Header from "@/components/layout/Header";
 import { Slot } from "expo-router";
 import { View } from "react-native";
 
-export default function TabsLayout() {
+const TabsLayout = () => {
   return (
     <View className="flex-1">
       <Header />
@@ -15,4 +15,6 @@ export default function TabsLayout() {
       <Footer />
     </View>
   );
-}
+};
+
+export default TabsLayout;
