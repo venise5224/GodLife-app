@@ -1,21 +1,13 @@
 import { Stack } from "expo-router";
-import { View } from "react-native";
-import {
-  SafeAreaProvider,
-  useSafeAreaInsets,
-} from "react-native-safe-area-context";
+import { StatusBar } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import "./global.css";
 
-const RootLayout = () => {
-  const insets = useSafeAreaInsets();
-
-  return (
-    <SafeAreaProvider>
-      <View style={{ flex: 1, paddingBottom: insets.bottom }}>
-        <Stack screenOptions={{ headerShown: false }} />
-      </View>
-    </SafeAreaProvider>
-  );
-};
+const RootLayout = () => (
+  <SafeAreaView style={{ flex: 1, backgroundColor: "#000" }}>
+    <StatusBar barStyle="light-content" backgroundColor="#000" />
+    <Stack screenOptions={{ headerShown: false }} />
+  </SafeAreaView>
+);
 
 export default RootLayout;

@@ -12,7 +12,7 @@ interface TimelineRunnerProps {
 
 const TimelineRunner = ({ cx, cy, r }: TimelineRunnerProps) => {
   const [currentMinutes, setCurrentMinutes] = useState(getCurrentMinutes());
-  const runnerPosition = polarToCartesian(cx, cy, currentMinutes, r - 45);
+  const runnerPosition = polarToCartesian(cx, cy, currentMinutes, r - 35);
 
   useEffect(() => {
     const currentTimer = setInterval(() => {
@@ -29,6 +29,7 @@ const TimelineRunner = ({ cx, cy, r }: TimelineRunnerProps) => {
       style={{
         width: 60,
         height: 60,
+        position: "absolute",
         left: runnerPosition.x - 30, // 중심 맞춤
         top: runnerPosition.y - 30,
         transform: [{ rotate: `${runnerPosition.deg}deg` }],

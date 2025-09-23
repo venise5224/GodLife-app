@@ -1,4 +1,5 @@
 import { polarToCartesian } from "@/utils/polarToCartesian";
+import { View } from "react-native";
 import { Circle, Svg, Text as SvgText } from "react-native-svg";
 import TimelineRunner from "./TimelineRunner";
 
@@ -9,38 +10,40 @@ const cy = SIZE / 2;
 
 const CircularTimeline = () => {
   return (
-    <Svg width="100%" height="100%" viewBox={`0 0 ${SIZE} ${SIZE}`}>
-      {/* 배경 원 */}
-      <Circle
-        cx={cx}
-        cy={cy}
-        r={r}
-        fill="#f8f9fa"
-        stroke="#1e2939"
-        strokeWidth={2}
-      />
+    <View className="flex-1 items-center justify-center">
+      <Svg width="100%" height="100%" viewBox={`0 0 ${SIZE} ${SIZE}`}>
+        {/* 배경 원 */}
+        <Circle
+          cx={cx}
+          cy={cy}
+          r={r}
+          fill="#f8f9fa"
+          stroke="#1e2939"
+          strokeWidth={2}
+        />
 
-      {/* 24시간 눈금 */}
-      {Array.from({ length: 24 }).map((_, i) => {
-        const hourPosition = polarToCartesian(cx, cy, i * 60, r + 15);
-        return (
-          <SvgText
-            key={i}
-            x={hourPosition.x}
-            y={hourPosition.y}
-            fontSize={10}
-            fill="black"
-            textAnchor="middle"
-            alignmentBaseline="middle"
-          >
-            {i}
-          </SvgText>
-        );
-      })}
+        {/* 24시간 눈금 */}
+        {Array.from({ length: 24 }).map((_, i) => {
+          const hourPosition = polarToCartesian(cx, cy, i * 60, r + 15);
+          return (
+            <SvgText
+              key={i}
+              x={hourPosition.x}
+              y={hourPosition.y}
+              fontSize={10}
+              fill="black"
+              textAnchor="middle"
+              alignmentBaseline="middle"
+            >
+              {i}
+            </SvgText>
+          );
+        })}
 
-      {/* 현재 시간 표시 */}
-      <TimelineRunner cx={cx} cy={cy} r={r} />
-    </Svg>
+        {/* 현재 시간 표시 */}
+        <TimelineRunner cx={cx} cy={cy} r={r} />
+      </Svg>
+    </View>
   );
 };
 
