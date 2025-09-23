@@ -2,7 +2,7 @@ import ActivityBoard from "@/components/ActivityBoard/ActivityBoard";
 import ActivityRender from "@/components/ActivityRender/ActivityRender";
 import { View } from "react-native";
 
-export default function HomePage() {
+const HomePage = () => {
   return (
     <View className="flex-1">
       {/* 상단: 타임라인 / 활동목록 (탭) */}
@@ -16,4 +16,6 @@ export default function HomePage() {
       </View>
     </View>
   );
-}
+};
+
+export default HomePage;

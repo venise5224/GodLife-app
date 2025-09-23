@@ -6,7 +6,7 @@ import {
 } from "react-native-safe-area-context";
 import "./global.css";
 
-export default function RootLayout() {
+const RootLayout = () => {
   const insets = useSafeAreaInsets();
 
   return (
@@ -16,4 +16,6 @@ export default function RootLayout() {
       </View>
     </SafeAreaProvider>
   );
-}
+};
+
+export default RootLayout;
