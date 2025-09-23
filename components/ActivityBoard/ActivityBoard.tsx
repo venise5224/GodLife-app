@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Pressable, Text, View } from "react-native";
+import ActivityLogger from "./ActivityLogger";
+import ActivityPlanner from "./ActivityPlanner";
 
 export default function ActivityBoard() {
   const [boardTab, setBoardTab] = useState<"logger" | "planner">("logger");
@@ -44,12 +46,8 @@ export default function ActivityBoard() {
       </View>
 
       {/* 탭 컨텐츠 */}
-      <View className="border-2 border-t-0 rounded-b-2xl p-4">
-        {boardTab === "logger" ? (
-          <View>활동 기록</View>
-        ) : (
-          <View>활동 계획</View>
-        )}
+      <View className="border-2 border-t-0 rounded-b-2xl p-2 bg-white">
+        {boardTab === "logger" ? <ActivityLogger /> : <ActivityPlanner />}
       </View>
     </View>
   );
