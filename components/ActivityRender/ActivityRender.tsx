@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Pressable, Text, View } from "react-native";
+import CircularTimeline from "./CircularTimeline";
 
 export default function ActivityRender() {
   const [renderTab, setRenderTab] = useState<"timeline" | "list">("timeline");
@@ -46,7 +47,7 @@ export default function ActivityRender() {
       {/* 탭 컨텐츠 */}
       <View className="mt-2 flex-1">
         {renderTab === "timeline" ? (
-          <View>타임라인 화면</View>
+          <CircularTimeline />
         ) : (
           <View className="px-2 flex-1">
             <View>활동 목록 화면</View>
