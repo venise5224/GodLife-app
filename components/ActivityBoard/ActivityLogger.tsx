@@ -1,4 +1,5 @@
 import { Pressable, Text, TextInput, View } from "react-native";
+import CurrentTime from "./CurrentTime";
 
 const ActivityLogger = () => {
   return (
@@ -10,7 +11,7 @@ const ActivityLogger = () => {
           placeholderTextColor="#ffffff"
           className="text-sm text-center text-white"
         />
-        <Text className="text-yellow-500">현재 시간</Text>
+        <CurrentTime />
       </View>
 
       {/* 버튼 영역 */}
