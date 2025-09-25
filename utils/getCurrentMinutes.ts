@@ -1,4 +1,3 @@
-export const getCurrentMinutes = () => {
-  const now = new Date();
-  return now.getHours() * 60 + now.getMinutes() + now.getSeconds() / 60;
+export const getCurrentMinutes = (date: Date) => {
+  return date.getHours() * 60 + date.getMinutes() + date.getSeconds() / 60;
 };
