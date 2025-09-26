@@ -1,18 +1,15 @@
 import runner from "@/assets/lottie/runner.json";
-import { useCurrentTime } from "@/hooks/useCurrentTime";
-import { getCurrentMinutes } from "@/utils/getCurrentMinutes";
-import { polarToCartesian } from "@/utils/polarToCartesian";
+import { polarToCartesian } from "@/utils/circleUtils";
 import LottieView from "lottie-react-native";
 
 interface TimelineRunnerProps {
   cx: number;
   cy: number;
   r: number;
+  currentMinutes: number;
 }
 
-const TimelineRunner = ({ cx, cy, r }: TimelineRunnerProps) => {
-  const currentTime = useCurrentTime(); // 현재 시간
-  const currentMinutes = getCurrentMinutes(currentTime); // 현재 시간을 분 단위로 변환
+const TimelineRunner = ({ cx, cy, r, currentMinutes }: TimelineRunnerProps) => {
   const runnerPosition = polarToCartesian(cx, cy, currentMinutes, r - 35);
 
   return (
