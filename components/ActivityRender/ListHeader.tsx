@@ -1,14 +1,22 @@
 import { Text, View } from "react-native";
 
 const ListHeader = () => {
+  const menuList = [
+    { id: 1, name: "이름", className: "w-[50px]" },
+    { id: 2, name: "Source", className: "w-[50px] text-center" },
+    { id: 3, name: "시작", className: "w-[60px] text-center" },
+    { id: 4, name: "종료", className: "w-[60px] text-center" },
+    { id: 5, name: "소요 시간", className: "w-[60px] text-center" },
+    { id: 6, name: "삭제", className: "w-[20px]" },
+  ];
+
   return (
-    <View className="flex-row px-2 py-2 text-xs text-gray-500 border-b mb-2">
-      <Text className="flex-1">이름</Text>
-      <Text className="w-20 text-center">Source</Text>
-      <Text className="w-20 text-center">시작</Text>
-      <Text className="w-20 text-center">종료</Text>
-      <Text className="w-20 text-center">소요 시간</Text>
-      <Text className="w-12 text-center">삭제</Text>
+    <View className="flex-row p-2 text-xs text-gray-500 border-b">
+      {menuList.map((menu) => (
+        <Text key={menu.id} className={`font-bold text-xs ${menu.className}`}>
+          {menu.name}
+        </Text>
+      ))}
     </View>
   );
 };

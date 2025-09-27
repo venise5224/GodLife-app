@@ -34,12 +34,14 @@ const ActivityList = () => {
 
   return (
     <View className="flex-1 p-4 bg-white rounded-2xl border-2 border-gray-200 shadow-lg mx-2">
-      <Text className="text-xl font-bold mb-4">활동 목록</Text>
+      <View className="flex-row justify-between items-center">
+        <Text className="text-xl font-bold">활동 목록</Text>
+        <ActivityFilter filter={filter} onChange={setFilter} />
+      </View>
 
-      <ActivityFilter filter={filter} onChange={setFilter} />
       <ListHeader />
 
-      <ScrollView contentContainerStyle={{ paddingBottom: 100 }}>
+      <ScrollView className="mt-2">
         {filteredActivityList.length === 0 ? (
           <Text className="text-center text-gray-400 py-6">
             항목이 없습니다.
