@@ -18,7 +18,7 @@ const ActivityLogger = () => {
       id: Date.now().toString(),
       activityName,
       startTime: Date.now().toString(),
-      source: "log",
+      source: "Log",
     };
 
     addActivity(newActivity);

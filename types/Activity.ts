@@ -3,5 +3,5 @@ export interface Activity {
   activityName: string;
   startTime: string;
   endTime?: string;
-  source: "plan" | "log";
+  source: "Plan" | "Log";
 }
