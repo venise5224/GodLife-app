@@ -1,4 +1,3 @@
-import { useActivityStore } from "@/stores/useActivityStore";
 import { Activity } from "@/types/Activity";
 import { describeArc, polarToCartesian } from "@/utils/circleUtils";
 import { parseTime } from "@/utils/timeUtils";
@@ -19,11 +18,9 @@ const TimelineActivity = ({
   r,
   currentMinutes,
 }: TimelineActivityProps) => {
-  const { removeActivity } = useActivityStore();
-
   const start = parseTime(activity.startTime);
   const end =
-    activity.source === "log" && !activity.endTime && currentMinutes !== null
+    activity.source === "Log" && !activity.endTime && currentMinutes !== null
       ? currentMinutes
       : parseTime(activity.endTime || activity.startTime);
 
@@ -36,12 +33,12 @@ const TimelineActivity = ({
 
   const arcPath = describeArc(cx, cy, start, end, radius);
   const fillColor =
-    activity.source === "plan"
+    activity.source === "Plan"
       ? "rgba(234, 179, 8, 1)"
       : "rgba(34, 197, 94, 1)";
 
   const strokeDasharray =
-    activity.source === "log" && !activity.endTime ? "4 4" : undefined;
+    activity.source === "Log" && !activity.endTime ? "4 4" : undefined;
 
   return (
     <G>
