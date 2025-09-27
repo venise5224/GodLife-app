@@ -17,7 +17,7 @@ const ActivityLogger = () => {
     const newActivity: Activity = {
       id: Date.now().toString(),
       activityName,
-      startTime: Date.now().toString(),
+      startTime: Date.now(),
       source: "Log",
     };
 
@@ -31,7 +31,7 @@ const ActivityLogger = () => {
 
     const finishedActivity: Activity = {
       ...runningActivity,
-      endTime: Date.now().toString(),
+      endTime: Date.now(),
     };
 
     updateActivity(finishedActivity);

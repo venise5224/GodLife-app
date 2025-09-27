@@ -7,7 +7,7 @@ interface Props {
 
 const ActivityFilter = ({ filter, onChange }: Props) => {
   return (
-    <View className="flex-row gap-2 mb-2">
+    <View className="flex-row gap-2">
       {(["All", "Plan", "Log"] as const).map((activitySource) => (
         <Pressable
           key={activitySource}
