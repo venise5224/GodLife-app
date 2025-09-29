@@ -10,7 +10,7 @@ interface TimelineRunnerProps {
 }
 
 const TimelineRunner = ({ cx, cy, r, currentMinutes }: TimelineRunnerProps) => {
-  const runnerPosition = polarToCartesian(cx, cy, currentMinutes, r - 35);
+  const runnerPosition = polarToCartesian(cx, cy, currentMinutes, r + 15);
 
   return (
     <LottieView
