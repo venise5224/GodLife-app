@@ -7,7 +7,7 @@ import { Circle, Svg, Text as SvgText } from "react-native-svg";
 import TimelineActivity from "./TimelineActivity";
 import TimelineRunner from "./TimelineRunner";
 
-const SIZE = 400; // SVG 크기
+const SIZE = 360; // SVG 크기
 const r = SIZE / 2 - 30; // 반지름
 const cx = SIZE / 2;
 const cy = SIZE / 2;
@@ -18,7 +18,7 @@ const CircularTimeline = () => {
   const currentMinutes = getMinutes(currentTime);
 
   return (
-    <View className="flex-1 items-center justify-center">
+    <View className="relative w-[360px] h-[360px] items-center justify-center">
       <Svg width="100%" height="100%" viewBox={`0 0 ${SIZE} ${SIZE}`}>
         {/* 배경 원 */}
         <Circle
