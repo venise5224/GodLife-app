@@ -1,7 +1,7 @@
 import { useCurrentTime } from "@/hooks/useCurrentTime";
 import { useActivityStore } from "@/stores/useActivityStore";
 import { polarToCartesian } from "@/utils/circleUtils";
-import { getCurrentMinutes } from "@/utils/timeUtils";
+import { getMinutes } from "@/utils/timeUtils";
 import { View } from "react-native";
 import { Circle, Svg, Text as SvgText } from "react-native-svg";
 import TimelineActivity from "./TimelineActivity";
@@ -15,7 +15,7 @@ const cy = SIZE / 2;
 const CircularTimeline = () => {
   const activityList = useActivityStore((state) => state.activityList);
   const currentTime = useCurrentTime();
-  const currentMinutes = getCurrentMinutes(currentTime);
+  const currentMinutes = getMinutes(currentTime);
 
   return (
     <View className="relative w-[360px] h-[360px] items-center justify-center">

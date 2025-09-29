@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Text } from "react-native";
 
 interface ElapsedTimeProps {
-  startTime: string; // runningActivity.startTime
+  startTime: number;
 }
 
 const ElapsedTime = ({ startTime }: ElapsedTimeProps) => {
@@ -10,7 +10,7 @@ const ElapsedTime = ({ startTime }: ElapsedTimeProps) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const diff = Date.now() - Number(startTime);
+      const diff = Date.now() - startTime;
       setElapsed(diff);
     }, 1000); // 1초마다 갱신
 
