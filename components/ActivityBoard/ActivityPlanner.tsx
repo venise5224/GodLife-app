@@ -9,11 +9,8 @@ const ActivityLogger = () => {
   const [activityName, setActivityName] = useState("");
   const [startTime, setStartTime] = useState<Date | null>(null);
   const [endTime, setEndTime] = useState<Date | null>(null);
-
   const [showStartPicker, setShowStartPicker] = useState(false);
   const [showEndPicker, setShowEndPicker] = useState(false);
-
-  // ... 나머지 useState 등은 동일
 
   const handleSave = () => {
     if (!activityName || !startTime || !endTime) {
@@ -91,7 +88,7 @@ const ActivityLogger = () => {
             mode="time"
             value={startTime || new Date()}
             is24Hour
-            onChange={(event, selectedDate) => {
+            onChange={(_, selectedDate) => {
               setShowStartPicker(false);
               if (selectedDate) setStartTime(selectedDate);
             }}
@@ -104,7 +101,7 @@ const ActivityLogger = () => {
             mode="time"
             value={endTime || new Date()}
             is24Hour
-            onChange={(event, selectedDate) => {
+            onChange={(_, selectedDate) => {
               setShowEndPicker(false);
               if (selectedDate) setEndTime(selectedDate);
             }}
