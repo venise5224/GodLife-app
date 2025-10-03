@@ -21,7 +21,7 @@ const ActivityStats = ({ source }: ActivityStatsProps) => {
           </View>
         ))
       ) : (
-        <Text className="text-center text-gray-500">
+        <Text className="mt-2 text-center text-gray-500">
           활동 {source === "Plan" ? "계획" : "기록"}이 없습니다.
         </Text>
       )}
