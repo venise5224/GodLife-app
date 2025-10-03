@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Pressable, ScrollView, Text, View } from "react-native";
 import ActivityStats from "./components/ActivityStats";
+import PlanVsLogStats from "./components/PlanVsLogStats";
 
 const Stats = () => {
   const [activeTab, setActiveTab] = useState<"Plan" | "Log" | "PlanVsLog">(
@@ -45,7 +46,7 @@ const Stats = () => {
         <ScrollView>
           {activeTab === "Plan" && <ActivityStats source="Plan" />}
           {activeTab === "Log" && <ActivityStats source="Log" />}
-          {activeTab === "PlanVsLog" && <Text>계획 대비 기록 통계</Text>}
+          {activeTab === "PlanVsLog" && <PlanVsLogStats />}
         </ScrollView>
       </View>
     </View>
