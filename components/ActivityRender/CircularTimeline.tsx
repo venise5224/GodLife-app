@@ -1,5 +1,5 @@
 import { useCurrentTime } from "@/hooks/useCurrentTime";
-import { useActivityStore } from "@/stores/useActivityStore";
+import useTodayActivities from "@/hooks/useTodayActivities";
 import { polarToCartesian } from "@/utils/circleUtils";
 import { getMinutes } from "@/utils/timeUtils";
 import { View } from "react-native";
@@ -13,7 +13,7 @@ const cx = SIZE / 2;
 const cy = SIZE / 2;
 
 const CircularTimeline = () => {
-  const activityList = useActivityStore((state) => state.activityList);
+  const todayActivities = useTodayActivities();
   const currentTime = useCurrentTime();
   const currentMinutes = getMinutes(currentTime);
 
@@ -49,7 +49,7 @@ const CircularTimeline = () => {
         })}
 
         {/* 활동 목록 */}
-        {activityList.map((activity) => (
+        {todayActivities.map((activity) => (
           <TimelineActivity
             key={activity.id}
             activity={activity}
