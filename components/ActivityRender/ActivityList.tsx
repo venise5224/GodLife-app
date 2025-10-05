@@ -1,3 +1,4 @@
+import useTodayActivities from "@/hooks/useTodayActivities";
 import { useActivityStore } from "@/stores/useActivityStore";
 import { useMemo, useState } from "react";
 import { ScrollView, Text, View } from "react-native";
@@ -7,11 +8,12 @@ import RowItem from "./RowItem";
 
 const ActivityList = () => {
   const [filter, setFilter] = useState<"All" | "Plan" | "Log">("All");
-  const { activityList, removeActivity } = useActivityStore();
+  const { removeActivity } = useActivityStore();
+  const todayActivities = useTodayActivities();
 
   // 필터링 + 정렬만 수행
   const filteredActivityList = useMemo(() => {
-    let filtered = activityList;
+    let filtered = todayActivities;
 
     if (filter !== "All") {
       filtered = filtered.filter((activity) => activity.source === filter);
@@ -30,7 +32,7 @@ const ActivityList = () => {
     });
 
     return filtered;
-  }, [activityList, filter]);
+  }, [todayActivities, filter]);
 
   return (
     <View className="flex-1 p-4 bg-white rounded-2xl border-2 border-gray-200 shadow-lg mx-2">

@@ -1,34 +1,12 @@
-import { useActivityStore } from "@/stores/useActivityStore";
 import { DAY_MINUTES } from "@/utils/constants";
 import { useMemo } from "react";
+import useTodayActivities from "./useTodayActivities";
 
 const useGroupedActivities = (source: "Plan" | "Log") => {
-  const { activityList } = useActivityStore();
+  const todayActivities = useTodayActivities();
 
   return useMemo(() => {
-    // 1. 오늘 자정 기준 timestamp 구하기
-    const today = new Date();
-    const todayKey = new Date(
-      today.getFullYear(),
-      today.getMonth(),
-      today.getDate()
-    ).getTime();
-
-    const tomorrowKey = new Date(
-      today.getFullYear(),
-      today.getMonth(),
-      today.getDate() + 1
-    ).getTime();
-
-    // 2. 오늘 날짜의 활동만 필터
-    const todayActivities = activityList.filter(
-      (a) =>
-        a.endTime !== undefined &&
-        a.endTime >= todayKey &&
-        a.endTime < tomorrowKey
-    );
-
-    // 3. source(Plan/Log) 필터 + 유효한 시간만 계산
+    //  source(Plan/Log) 필터 + 유효한 시간만 계산
     const filtered = todayActivities.filter(
       (a) =>
         a.source.toLowerCase() === source.toLowerCase() &&
@@ -57,7 +35,7 @@ const useGroupedActivities = (source: "Plan" | "Log") => {
       }));
 
     return { totalMinutes, grouped };
-  }, [activityList, source]);
+  }, [todayActivities, source]);
 };
 
 export default useGroupedActivities;
