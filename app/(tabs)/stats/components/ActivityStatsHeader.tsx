@@ -1,4 +1,4 @@
-import { Calendar, Clock } from "lucide-react-native"; // 또는 @expo/vector-icons
+import { Calendar, Clock } from "lucide-react-native";
 import { Text, View } from "react-native";
 
 interface ActivityStatsHeaderProps {

@@ -4,6 +4,7 @@ import { polarToCartesian } from "@/utils/circleUtils";
 import { getMinutes } from "@/utils/timeUtils";
 import { View } from "react-native";
 import { Circle, Svg, Text as SvgText } from "react-native-svg";
+import ResetTimer from "./ResetTimer";
 import TimelineActivity from "./TimelineActivity";
 import TimelineRunner from "./TimelineRunner";
 
@@ -16,6 +17,7 @@ const CircularTimeline = () => {
   const todayActivities = useTodayActivities();
   const currentTime = useCurrentTime();
   const currentMinutes = getMinutes(currentTime);
+  const resetHour = 8; // 초기화 시간 (8시로 설정)
 
   return (
     <View className="relative w-[360px] h-[360px] items-center justify-center">
@@ -43,10 +45,12 @@ const CircularTimeline = () => {
               textAnchor="middle"
               alignmentBaseline="middle"
             >
-              {i}
+              {i === resetHour ? "" : i}
             </SvgText>
           );
         })}
+
+        <ResetTimer cx={cx} cy={cy} r={r} resetHour={resetHour} />
 
         {/* 활동 목록 */}
         {todayActivities.map((activity) => (
