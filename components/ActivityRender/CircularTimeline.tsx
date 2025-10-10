@@ -1,5 +1,6 @@
 import { useCurrentTime } from "@/hooks/useCurrentTime";
 import useTodayActivities from "@/hooks/useTodayActivities";
+import { useResetHourStore } from "@/stores/useResetHourStore";
 import { polarToCartesian } from "@/utils/circleUtils";
 import { getMinutes } from "@/utils/timeUtils";
 import { View } from "react-native";
@@ -17,7 +18,7 @@ const CircularTimeline = () => {
   const todayActivities = useTodayActivities();
   const currentTime = useCurrentTime();
   const currentMinutes = getMinutes(currentTime);
-  const resetHour = 8; // 초기화 시간 (8시로 설정)
+  const { resetHour } = useResetHourStore(); // 초기화 시간 (8시로 설정)
 
   return (
     <View className="relative w-[360px] h-[360px] items-center justify-center">
