@@ -24,14 +24,15 @@ const TimelineActivity = ({
       ? currentMinutes
       : parseTime(activity.endTime || activity.startTime);
 
-  const adjustedEnd = end < start ? end + 1440 : end;
+  // end == start일 때 1분이라도 보이게 보정
+  const safeEnd = end === start ? end + 1 : end;
+  const adjustedEnd = safeEnd < start ? safeEnd + 1440 : safeEnd;
   const mid = (start + adjustedEnd) / 2;
   const midMinutes = mid % 1440;
 
   const textPos = polarToCartesian(cx, cy, midMinutes, r * 0.6);
-  const radius = r;
 
-  const arcPath = describeArc(cx, cy, start, end, radius);
+  const arcPath = describeArc(cx, cy, start, adjustedEnd, r);
   const fillColor =
     activity.source === "Plan"
       ? "rgba(234, 179, 8, 1)"
