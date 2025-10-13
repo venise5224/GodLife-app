@@ -23,7 +23,11 @@ export function describeArc(
 ) {
   const startCoord = polarToCartesian(cx, cy, start, radius);
   const endCoord = polarToCartesian(cx, cy, end, radius);
-  const largeArc = end - start > 720 ? 1 : 0;
+  // 각도 차이를 0~1440분 범위로 보정
+  const diff = (end - start + 1440) % 1440;
+
+  // 12시간(720분, 180도) 초과면 largeArc 설정
+  const largeArc = diff > 720 ? 1 : 0;
 
   return [
     `M ${cx},${cy}`,
