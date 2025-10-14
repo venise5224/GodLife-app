@@ -2,6 +2,7 @@
   "expo": {
     "name": "godlife-app",
     "slug": "godlife-app",
+    "owner": "jsonmin",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -44,6 +45,18 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "0d2d5bfd-a768-4445-8158-de9c24ac989d"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/0d2d5bfd-a768-4445-8158-de9c24ac989d"
     }
   }
 }
