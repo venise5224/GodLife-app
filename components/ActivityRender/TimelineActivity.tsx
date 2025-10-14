@@ -29,8 +29,9 @@ const TimelineActivity = ({
   const adjustedEnd = safeEnd < start ? safeEnd + 1440 : safeEnd;
   const mid = (start + adjustedEnd) / 2;
   const midMinutes = mid % 1440;
+  const adjustedR = activity.source === "Plan" ? r + 50 : r;
 
-  const textPos = polarToCartesian(cx, cy, midMinutes, r * 0.6);
+  const textPos = polarToCartesian(cx, cy, midMinutes, adjustedR * 0.6);
 
   const arcPath = describeArc(cx, cy, start, adjustedEnd, r);
   const fillColor =
