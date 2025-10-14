@@ -1,7 +1,6 @@
 import ActivityBoard from "@/components/ActivityBoard/ActivityBoard";
 import ActivityRender from "@/components/ActivityRender/ActivityRender";
 import { View } from "react-native";
-
 const HomePage = () => {
   return (
     <View className="flex-1">
