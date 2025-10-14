@@ -36,12 +36,10 @@ const useTodayActivities = () => {
       0
     ).getTime();
 
-    return activityList.filter(
-      (a) =>
-        a.endTime !== undefined &&
-        a.endTime >= todayKey &&
-        a.endTime < tomorrowKey
-    );
+    return activityList.filter((a) => {
+      const end = a.endTime ?? Date.now(); // endTime이 없으면 현재 시간으로 간주
+      return end >= todayKey && end < tomorrowKey;
+    });
   }, [activityList, resetHour]);
 };
 
