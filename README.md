@@ -73,7 +73,13 @@
 <img width="125" height="250" alt="image" src="https://github.com/user-attachments/assets/62c5bf73-4e83-4bdb-b666-e89946e7a761" />
 
 ---
+## 🛠 기술 스택
 
+- **개발 프레임워크**: React Native (Expo)
+- **언어**: TypeScript
+- **스타일링**: Tailwind
+- **상태 관리**: Zustand
+---
 ## 📥 expo go QR Code
 
 > <img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/9776104e-77a5-40d3-94b0-85f643ac45b0" />
