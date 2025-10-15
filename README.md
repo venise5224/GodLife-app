@@ -1,4 +1,4 @@
-# 📱 GodLife
+# <img width="200" height="610" alt="GodLifeLogo" src="https://github.com/user-attachments/assets/bfc592b1-c71c-4cbf-8ecf-c095c5db926a" />
 
 **갓생러를 위한, 갓생러에 의한, 갓생러의 앱**
 
@@ -66,35 +66,18 @@
 
 ---
 
-## 🚀 앞으로의 계획
-
-- 다크모드 지원
-- 영어 및 기타 언어 지원
-- 백업 및 동기화 기능
-- 알림 및 리마인더 기능
-
----
-
-## 📌 요약
-
-| 기능 | 설명 |
-|------|------|
-| 활동 계획 | 하루 루틴을 시간 단위로 계획 |
-| 활동 기록 | 버튼으로 활동 시간 측정 |
-| 시간 통계 | 시각화된 활동 분석 |
-| 커스터마이징 | 하루 시작 시각 설정 가능 |
-
----
-
 ## 📎 예시 스크린샷
-
-
+<img width="125" height="250" alt="image" src="https://github.com/user-attachments/assets/9b068da9-b10f-4483-a6ee-52af1d39dcbc" />
+<img width="125" height="250" alt="image" src="https://github.com/user-attachments/assets/b366db44-edcb-48d6-ab7d-69ea3223eb24" />
+<img width="125" height="250" alt="image" src="https://github.com/user-attachments/assets/f3c0310f-4fde-4042-9d07-eac8452207dc" />
+<img width="125" height="250" alt="image" src="https://github.com/user-attachments/assets/62c5bf73-4e83-4bdb-b666-e89946e7a761" />
 
 ---
 
 ## 📥 expo go QR Code
 
-> (아직 배포되지 않았다면 생략 가능. 배포 시 링크 추가)
+> <img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/9776104e-77a5-40d3-94b0-85f643ac45b0" />
+
 
 ---
 
