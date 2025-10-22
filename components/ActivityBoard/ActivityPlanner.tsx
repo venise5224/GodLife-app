@@ -4,7 +4,7 @@ import DateTimePicker from "@react-native-community/datetimepicker";
 import { useState } from "react";
 import { Pressable, Text, TextInput, View } from "react-native";
 
-const ActivityLogger = () => {
+const ActivityPlanner = () => {
   const { addActivity } = useActivityStore();
   const [activityName, setActivityName] = useState("");
   const [startTime, setStartTime] = useState<Date | null>(null);
@@ -112,4 +112,4 @@ const ActivityLogger = () => {
   );
 };
 
-export default ActivityLogger;
+export default ActivityPlanner;
