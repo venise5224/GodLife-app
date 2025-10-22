@@ -1,50 +1,97 @@
-# Welcome to your Expo app 👋
+# <img width="200" height="610" alt="GodLifeLogo" src="https://github.com/user-attachments/assets/bfc592b1-c71c-4cbf-8ecf-c095c5db926a" />
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**갓생러를 위한, 갓생러에 의한, 갓생러의 앱**
 
-## Get started
+> 매일의 루틴을 기록하고, 시간을 어떻게 사용했는지 한눈에 파악하세요.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 💡 개요
 
-2. Start the app
+**GodLife**는 시간을 의미 있게 쓰고 싶은 사람들을 위한 **시간 관리 & 루틴 트래킹 앱**입니다.  
+활동을 계획하고, 실행하고, 그 결과를 시각적으로 분석함으로써 **자기 관리 루틴**을 효과적으로 도와줍니다.
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## 🧭 주요 기능
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 🏠 홈 (Home)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+일상의 루틴을 손쉽게 **계획하고 기록**할 수 있는 메인 화면입니다.
 
-## Get a fresh project
+- **활동 타임라인 & 활동 목록 리스트**  
+  오늘 하루의 활동들이 시간 순서대로 정리되어 나타납니다.
+  
+- **활동 계획 보드**  
+  시작 시간과 종료 시간을 입력하여 활동을 미리 계획할 수 있습니다.
+  
+- **활동 기록 보드**  
+  `Start`, `End` 버튼을 눌러 실시간으로 활동을 기록합니다.
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
-```
+### 📊 통계 (Statistics)
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+기록한 활동을 바탕으로 다양한 시각적 통계를 제공합니다.
 
-## Learn more
+1. **계획 기반 분석**
+   - 하루 24시간 중 각 계획 활동이 차지하는 **시간 비율**
+   - 전체 계획 시간 중 각 활동이 차지하는 **비율**
 
-To learn more about developing your project with Expo, look at the following resources:
+2. **기록 기반 분석**
+   - 하루 24시간 중 실제 기록된 활동의 **시간 비율**
+   - 전체 기록 시간 중 각 활동의 **비율**
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+3. **계획 대비 기록 퍼센트**
+   - 각 활동별로 **계획한 시간 대비 실제 실행한 시간의 비율**을 확인할 수 있습니다.
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+### ⚙️ 설정 (Settings)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+사용자의 편의성을 위한 커스터마이징 기능을 제공합니다.
+
+- 🌙 **다크모드** (준비 중)
+- 🌍 **다국어 지원** (준비 중)
+- ⏰ **기준 시각 설정**  
+  하루의 시작 시점을 사용자가 직접 설정할 수 있습니다. (예: 오전 5시)
+
+---
+
+## ✨ 이런 분들에게 추천해요
+
+- “하루가 어떻게 지나가는지 모르겠어...”  
+- “루틴을 만들고 싶은데 작심삼일이야...”  
+- “내 시간 사용을 시각적으로 보고 싶어!”
+
+---
+
+## 📎 예시 스크린샷
+<img width="125" height="250" alt="image" src="https://github.com/user-attachments/assets/9b068da9-b10f-4483-a6ee-52af1d39dcbc" />
+<img width="125" height="250" alt="image" src="https://github.com/user-attachments/assets/b366db44-edcb-48d6-ab7d-69ea3223eb24" />
+<img width="125" height="250" alt="image" src="https://github.com/user-attachments/assets/f3c0310f-4fde-4042-9d07-eac8452207dc" />
+<img width="125" height="250" alt="image" src="https://github.com/user-attachments/assets/62c5bf73-4e83-4bdb-b666-e89946e7a761" />
+
+---
+## 🛠 기술 스택
+
+- **개발 프레임워크**: React Native (Expo)
+- **언어**: TypeScript
+- **스타일링**: Tailwind
+- **상태 관리**: Zustand
+---
+## 📥 expo go QR Code
+
+> <img width="250" height="250" alt="image" src="https://github.com/user-attachments/assets/9776104e-77a5-40d3-94b0-85f643ac45b0" />
+
+
+---
+
+## 🙌 만든이
+
+- **개발자:** JsonMin
+- **문의:** devjsonMin@gmail.com
+
+---
+
+
